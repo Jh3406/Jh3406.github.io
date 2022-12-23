@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="#">
+        <input type="number" id="n1">
+        <!-- <input type="text" id="opr"> -->
+        <select name="opr" id="opr">
+            <option value="+">Add</option>
+            <option value="-">Subtract</option>
+            <option value="*">Multiply</option>
+            <option value="/">Divide</option>
+        </select>
+        <input type="number" id="n2">
+        <button onclick="assignRes()" type="button">=</button>
+        <input type="number" id="res">
+    </form>
+    <script>
+        //function add(x,y){
+        //    return x+y;
+        //}
+        function assignRes(){
+        x = Number(document.getElementById("n1").value);
+        y = Number(document.getElementById("n2").value);
+        opr = document.getElementById("opr").value;
+        
+        if (opr == "+") {
+            document.getElementById("res").value = x + y;
+        } else if (opr == "-") {
+            document.getElementById("res").value = x - y;
+
+        } else if (opr == "*") {
+            document.getElementById("res").value = x * y;
+
+        } else if (opr == "/") {
+            document.getElementById("res").value = x / y;
+
+        }
+
+
+
+        }
+    </script>
+</body>
+</html>
